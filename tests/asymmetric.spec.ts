@@ -1,5 +1,4 @@
-import { test } from '@playwright/test';
-import { expect } from '../src';
+import { test, expect } from '@playwright/test';
 
 test.describe('Asymmetric Matchers', () => {
   test('toStartWith', () => {

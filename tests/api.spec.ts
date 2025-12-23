@@ -1,6 +1,5 @@
-import { test, expect as playwrightExpect, APIResponse } from '@playwright/test';
+import { test, expect, type APIResponse } from '@playwright/test';
 import { z } from 'zod';
-import { expect } from '../src';
 
 test.describe('API Matchers', () => {
   test('toMatchJSON works with exact match', async () => {

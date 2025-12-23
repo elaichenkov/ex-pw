@@ -25,15 +25,6 @@ import exPw from "ex-pw";
 expect.extend(exPw);
 ```
 
-### Option 2: Import Individual Matchers
-
-```typescript
-import { expect } from "@playwright/test";
-import { toBeClickable, toBeRequired, toMatchSchema } from "ex-pw";
-
-expect.extend({ toBeClickable, toBeRequired, toMatchSchema });
-```
-
 ---
 
 ## Locator Matchers
@@ -515,13 +506,6 @@ await expect(request).toRespondWithin(1000);
 
 Asymmetric matchers can be used both in `expect().toEqual()` assertions and as
 standalone matchers.
-
-> **Note:** To use asymmetric matchers like `expect.toBeEmail()`, you need to
-> import `expect` directly from ex-pw:
->
-> ```typescript
-> import { expect } from "ex-pw";
-> ```
 
 ### String Matchers
 
