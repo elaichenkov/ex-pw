@@ -1,8 +1,8 @@
 import { test, expect as playwrightExpect } from '@playwright/test';
-import xpecto from '../src';
+import exPw from '../src';
 
-// Extend expect with xpecto matchers
-const expect = playwrightExpect.extend(xpecto);
+// Extend expect with exPw matchers
+const expect = playwrightExpect.extend(exPw);
 
 test.describe('Page Matchers', () => {
   test.describe('toHaveCookie', () => {

@@ -1,5 +1,5 @@
 {
-    "name": "xpecto",
+    "name": "ex-pw",
     "version": "0.0.1",
     "description": "Extended Playwright expect matchers with auto-waiting and improved developer experience",
     "main": "./dist/index.js",

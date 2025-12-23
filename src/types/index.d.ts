@@ -53,7 +53,7 @@ interface ToHavePageErrorOptions {
 }
 
 // Locator matchers
-interface XpectoLocatorMatchers {
+interface ExPwLocatorMatchers {
   /**
    * Asserts that an element is in a clickable state.
    * Uses Playwright's `click({ trial: true })` which performs all actionability checks.
@@ -128,7 +128,7 @@ interface XpectoLocatorMatchers {
 
 
 // Page matchers
-interface XpectoPageMatchers {
+interface ExPwPageMatchers {
   /**
    * Asserts that the page's context has a specific cookie.
    */
@@ -183,7 +183,7 @@ interface XpectoPageMatchers {
 
 
 // Test matchers (when T is test object)
-interface XpectoTestMatchers {
+interface ExPwTestMatchers {
   /**
    * Asserts that there are no test errors (useful with soft assertions).
    * Pass the `test` object and it calls `.info()` internally to check for errors.
@@ -195,7 +195,7 @@ interface XpectoTestMatchers {
 }
 
 // API matchers
-interface XpectoAPIMatchers {
+interface ExPwAPIMatchers {
   /**
    * Asserts that an API response body matches the expected JSON.
    */
@@ -245,7 +245,7 @@ interface ToBeSortedOptions {
   intervals?: number[];
 }
 
-interface XpectoGeneralMatchers {
+interface ExPwGeneralMatchers {
   /**
    * Asserts that an array or locator elements are sorted.
    * When used with a Locator, extracts text using allInnerTexts() or allTextContents().
@@ -255,7 +255,7 @@ interface XpectoGeneralMatchers {
 
 
 // Asymmetric matchers (added to expect object)
-interface XpectoAsymmetricMatchers {
+interface ExPwAsymmetricMatchers {
   /**
    * Asymmetric matcher that checks if a number is within a specified range.
    */
@@ -394,15 +394,15 @@ declare module '@playwright/test' {
   }
 
 
-  interface Expect extends XpectoAsymmetricMatchers { }
+  interface Expect extends ExPwAsymmetricMatchers { }
 }
 
 export type {
-  XpectoLocatorMatchers,
-  XpectoPageMatchers,
-  XpectoTestMatchers,
-  XpectoAPIMatchers,
-  XpectoAsymmetricMatchers,
+  ExPwLocatorMatchers,
+  ExPwPageMatchers,
+  ExPwTestMatchers,
+  ExPwAPIMatchers,
+  ExPwAsymmetricMatchers,
 
   TimeoutOptions,
   ToBeSortedOptions,

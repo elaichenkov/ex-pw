@@ -1,14 +1,14 @@
-# xpecto
+# ex-pw
 
 Extended Playwright expect matchers with auto-waiting and improved developer
 experience.
 
-[![npm version](https://badge.fury.io/js/xpecto.svg)](https://www.npmjs.com/package/xpecto)
+[![npm version](https://badge.fury.io/js/ex-pw.svg)](https://www.npmjs.com/package/ex-pw)
 
 ## Installation
 
 ```bash
-npm install -D xpecto
+npm install -D ex-pw
 ```
 
 ## Setup
@@ -19,17 +19,17 @@ Update your `playwright.config.ts`:
 
 ```typescript
 import { expect } from "@playwright/test";
-import xpecto from "xpecto";
+import exPw from "ex-pw";
 
 // Extend expect globally
-expect.extend(xpecto);
+expect.extend(exPw);
 ```
 
 ### Option 2: Import Individual Matchers
 
 ```typescript
 import { expect } from "@playwright/test";
-import { toBeClickable, toBeRequired, toMatchSchema } from "xpecto";
+import { toBeClickable, toBeRequired, toMatchSchema } from "ex-pw";
 
 expect.extend({ toBeClickable, toBeRequired, toMatchSchema });
 ```
@@ -435,7 +435,7 @@ await expect(response).toMatchJSON({ id: 1, name: "John" });
 // Partial match with Playwright's built-in matchers
 await expect(response).toMatchJSON(expect.objectContaining({ id: 1 }));
 
-// With xpecto asymmetric matchers
+// With ex-pw asymmetric matchers
 await expect(response).toMatchJSON({
     id: expect.toBeUUID(),
     email: expect.toBeEmail(),
@@ -517,10 +517,10 @@ Asymmetric matchers can be used both in `expect().toEqual()` assertions and as
 standalone matchers.
 
 > **Note:** To use asymmetric matchers like `expect.toBeEmail()`, you need to
-> import `expect` directly from xpecto:
+> import `expect` directly from ex-pw:
 >
 > ```typescript
-> import { expect } from "xpecto";
+> import { expect } from "ex-pw";
 > ```
 
 ### String Matchers

@@ -1,5 +1,5 @@
 /**
- * xpecto - Extended Playwright expect matchers
+ * ex-pw - Extended Playwright expect matchers
  *
  * A TypeScript library that extends Playwright's built-in `expect` matchers
  * with additional assertions focused on auto-waiting and leveraging
@@ -8,18 +8,18 @@
  * @example
  * // Option 1: Extend existing expect with all matchers
  * import { expect } from '@playwright/test';
- * import xpecto from 'xpecto';
- * expect.extend(xpecto);
+ * import exPw from 'ex-pw';
+ * expect.extend(exPw);
  *
  * @example
  * // Option 2: Import individual matchers to extend
  * import { expect } from '@playwright/test';
- * import { toBeClickable, toBeRequired } from 'xpecto';
+ * import { toBeClickable, toBeRequired } from 'ex-pw';
  * expect.extend({ toBeClickable, toBeRequired });
  */
 
 import { expect as playwrightExpect } from '@playwright/test';
-import type { XpectoAsymmetricMatchers } from './types';
+import type { ExPwAsymmetricMatchers } from './types';
 import {
   allMatchers,
   locatorMatchers,
@@ -29,15 +29,15 @@ import {
   generalMatchers,
 } from './matchers';
 
-const xpectoExpect = playwrightExpect.extend(allMatchers)
-export const expect = xpectoExpect as typeof xpectoExpect & XpectoAsymmetricMatchers;
+const exPwExpect = playwrightExpect.extend(allMatchers)
+export const expect = exPwExpect as typeof exPwExpect & ExPwAsymmetricMatchers;
 
-// Default export: all matchers combined (for expect.extend(xpecto))
-const xpecto = {
+// Default export: all matchers combined (for expect.extend(exPw))
+const exPw = {
   ...allMatchers,
 };
 
-export default xpecto;
+export default exPw;
 
 // Named exports for individual matchers
 // Locator matchers
@@ -114,11 +114,11 @@ export {
 
 // Re-export types
 export type {
-  XpectoLocatorMatchers,
-  XpectoPageMatchers,
-  XpectoTestMatchers,
-  XpectoAPIMatchers,
-  XpectoAsymmetricMatchers,
+  ExPwLocatorMatchers,
+  ExPwPageMatchers,
+  ExPwTestMatchers,
+  ExPwAPIMatchers,
+  ExPwAsymmetricMatchers,
 
   TimeoutOptions,
   ToBeSortedOptions,

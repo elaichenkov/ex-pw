@@ -1,7 +1,7 @@
 import { defineConfig, devices, expect } from '@playwright/test';
-import xpecto from './src';
+import exPw from './src';
 
-expect.extend(xpecto);
+expect.extend(exPw);
 
 export default defineConfig({
   testDir: './tests',
