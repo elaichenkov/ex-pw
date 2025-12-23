@@ -13,7 +13,7 @@ npm install -D ex-pw
 
 ## Setup
 
-### Option 1: Extend in Playwright Config (Recommended)
+### Extend in Playwright Config
 
 Update your `playwright.config.ts`:
 
