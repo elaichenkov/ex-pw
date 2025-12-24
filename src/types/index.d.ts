@@ -19,7 +19,7 @@ interface ToHaveStorageOptions {
   intervals?: number[];
 }
 
-interface ToHaveNoErrorsOptions {
+interface ToHaveNoSoftErrorsOptions {
   ignore?: RegExp;
 }
 
@@ -188,9 +188,9 @@ interface ExPwTestMatchers {
    * Pass the `test` object and it calls `.info()` internally to check for errors.
    * 
    * @example
-   * await expect(test).toHaveNoErrors();
+   * await expect(test).toHaveNoSoftErrors();
    */
-  toHaveNoErrors(options?: ToHaveNoErrorsOptions): void;
+  toHaveNoSoftErrors(options?: ToHaveNoSoftErrorsOptions): void;
 }
 
 // API matchers
@@ -486,9 +486,9 @@ declare global {
       /**
        * Asserts that there are no errors in the current test execution. Common with soft assertions.
        * @example
-       * await expect(test).toHaveNoErrors();
+       * await expect(test).toHaveNoSoftErrors();
        */
-      toHaveNoErrors(options?: ToHaveNoErrorsOptions): R;
+      toHaveNoSoftErrors(options?: ToHaveNoSoftErrorsOptions): R;
 
       // API matchers (when T is APIResponse)
 
@@ -776,7 +776,7 @@ export type {
   ToBeSortedOptions,
   ToHaveCookieOptions,
   ToHaveStorageOptions,
-  ToHaveNoErrorsOptions,
+  ToHaveNoSoftErrorsOptions,
   ToBeURLAsymmetricOptions,
   ToHaveRequestOptions,
   ToHaveConsoleMessageOptions,

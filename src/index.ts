@@ -60,7 +60,7 @@ export {
 
 // Page matchers
 export {
-  toHaveNoErrors,
+  toHaveNoSoftErrors,
   toHaveCookie,
   toHaveLocalStorage,
   toHaveSessionStorage,
@@ -124,7 +124,7 @@ export type {
   ToBeSortedOptions,
   ToHaveCookieOptions,
   ToHaveStorageOptions,
-  ToHaveNoErrorsOptions,
+  ToHaveNoSoftErrorsOptions,
   ToBeURLAsymmetricOptions,
   ToHaveRequestOptions,
   ToHaveConsoleMessageOptions,

@@ -358,7 +358,7 @@ await expect(page).toHavePageError({ message: /TypeError/ });
 await expect(page).not.toHavePageError(); // No errors expected
 ```
 
-### toHaveNoErrors
+### toHaveNoSoftErrors
 
 For use with soft assertions - checks for test errors.
 
@@ -369,10 +369,10 @@ For use with soft assertions - checks for test errors.
 ```typescript
 await expect.soft(page.getByTestId("status")).toHaveText("Success");
 await expect.soft(page.getByTestId("eta")).toHaveText("1 day");
-expect(test).toHaveNoErrors();
+expect(test).toHaveNoSoftErrors();
 
 // Ignore specific errors
-expect(test).toHaveNoErrors({ ignore: /Warning:/ });
+expect(test).toHaveNoSoftErrors({ ignore: /Warning:/ });
 ```
 
 ---

@@ -1,7 +1,7 @@
 // Page matchers
-export { toHaveNoErrors } from './toHaveNoErrors';
+export { toHaveNoSoftErrors } from './toHaveNoSoftErrors';
 export { toHaveCookie } from './toHaveCookie';
-export * from './toHaveNoErrors';
+export * from './toHaveNoSoftErrors';
 export * from './toHaveCookie';
 export * from './toHaveLocalStorage';
 export * from './toHaveSessionStorage';
@@ -10,7 +10,7 @@ export * from './toHaveRequest';
 export * from './toHaveConsoleMessage';
 export * from './toHavePageError';
 
-import { toHaveNoErrors } from './toHaveNoErrors';
+import { toHaveNoSoftErrors } from './toHaveNoSoftErrors';
 import { toHaveCookie } from './toHaveCookie';
 import { toHaveLocalStorage } from './toHaveLocalStorage';
 import { toHaveSessionStorage } from './toHaveSessionStorage';
@@ -21,7 +21,7 @@ import { toHavePageError } from './toHavePageError';
 
 // Combined object for easy spreading
 export const pageMatchers = {
-  toHaveNoErrors,
+  toHaveNoSoftErrors,
   toHaveCookie,
   toHaveLocalStorage,
   toHaveSessionStorage,

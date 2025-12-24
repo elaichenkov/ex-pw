@@ -1,6 +1,6 @@
 import type { TestType, ExpectMatcherState } from '@playwright/test';
 
-interface ToHaveNoErrorsOptions {
+interface ToHaveNoSoftErrorsOptions {
   ignore?: RegExp;
 }
 
@@ -11,19 +11,19 @@ interface ToHaveNoErrorsOptions {
  * @example
  * await expect.soft(page.getByTestId('status')).toHaveText('Success');
  * await expect.soft(page.getByTestId('eta')).toHaveText('1 day');
- * await expect(test).toHaveNoErrors();
+ * await expect(test).toHaveNoSoftErrors();
  *
  * @example
  * // Ignore specific errors
- * await expect(test).toHaveNoErrors({ ignore: /Warning:/ });
+ * await expect(test).toHaveNoSoftErrors({ ignore: /Warning:/ });
  */
-export function toHaveNoErrors(
+export function toHaveNoSoftErrors(
   this: ExpectMatcherState,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   testObject: TestType<any, any>,
-  options: ToHaveNoErrorsOptions = {}
+  options: ToHaveNoSoftErrorsOptions = {}
 ) {
-  const assertionName = 'toHaveNoErrors';
+  const assertionName = 'toHaveNoSoftErrors';
   const { ignore } = options;
 
   const testInfo = testObject.info();
