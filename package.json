@@ -2,6 +2,10 @@
     "name": "ex-pw",
     "version": "0.0.2",
     "description": "Extended Playwright expect matchers with auto-waiting and improved developer experience",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/elaichenkov/ex-pw.git"
+    },
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
