@@ -1,6 +1,6 @@
 {
     "name": "ex-pw",
-    "version": "0.0.3",
+    "version": "0.0.2",
     "description": "Extended Playwright expect matchers with auto-waiting and improved developer experience",
     "repository": {
         "type": "git",
