@@ -1,6 +1,6 @@
 {
     "name": "ex-pw",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Extended Playwright expect matchers with auto-waiting and improved developer experience",
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
